@@ -1,0 +1,20 @@
+{
+  "meta": {
+    "title": "Context Window Configurator",
+    "description": "Extends the composer model selector menu with a third 'Context window' row, preset capacities (64K–2M), custom input, and provider-wide sync."
+  },
+  "config": {
+    "enabled": {
+      "title": "Enable Plugin",
+      "description": "Whether to enable the Context Window manual configuration row in the composer model selector."
+    },
+    "showInTrigger": {
+      "title": "Show Capacity in Trigger",
+      "description": "Whether to compactly display the current context window capacity (e.g. 256K) on the composer model trigger button."
+    },
+    "defaultSyncAllProviderModels": {
+      "title": "Sync All Models in Provider by Default",
+      "description": "Default state of the 'Apply to all models of this provider' toggle in the context window pane."
+    }
+  }
+}

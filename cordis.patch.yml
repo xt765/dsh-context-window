@@ -1,0 +1,3 @@
+- insert:
+    - id: context-window
+      name: 'dsh-context-window'

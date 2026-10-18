@@ -1,0 +1,67 @@
+{
+  "name": "dsh-context-window",
+  "version": "0.1.0",
+  "description": "Manual context window selector & adaptive compaction guard plugin for DeepSeek Harness (上下文窗口手动配置与自适应压缩防失败守卫插件：在模型选择弹窗扩展第三行【上下文窗口】与 64K~2M/自定义输入面板，支持高切低先压缩保护并实时刷新 Context Pressure 进度条)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xt765/dsh-context-window.git"
+  },
+  "author": "xt765 <xt765@foxmail.com>",
+  "homepage": "https://github.com/xt765/dsh-context-window#readme",
+  "bugs": {
+    "url": "https://github.com/xt765/dsh-context-window/issues"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "lib",
+    "locale",
+    "assets",
+    "cordis.patch.yml",
+    "screenshots.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "cordis",
+    "context-window",
+    "compaction",
+    "model-selection"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "entry": "./lib/client.js",
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-api-session-controller",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-commands",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-model-selection",
+        "@deepseek-ai/dsh-client-ui-renderer",
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-ui-plugin-manager",
+        "@deepseek-ai/dsh-api-remotes"
+      ]
+    }
+  },
+  "license": "MIT"
+}
